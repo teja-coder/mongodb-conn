@@ -50,19 +50,33 @@ export default function Home() {
         
         <h1 className='text-center text-4xl'>Metrics</h1>
         <h1 className='text-2xl m-10'>CPU [#0]: AMD Ryzen 5 4600H: Enhanced</h1>
-        <div className='flex justify-evenly mt-10 w-auto'>
-          <PerformanceMetric title='CPU (Tctl/Tdie)' value={parseFloat(data['CPU [#0]: AMD Ryzen 5 4600H: Enhanced'][0]['CPU (Tctl/Tdie)'])} />
-          <PerformanceMetric title='CPU Core' value={parseFloat(data['CPU [#0]: AMD Ryzen 5 4600H: Enhanced'][1]['CPU Core'])} />
-          <PerformanceMetric title='CPU SOC' value={parseFloat(data['CPU [#0]: AMD Ryzen 5 4600H: Enhanced'][2]['CPU SOC'])} />
+        <div className='flex flex-col justify-evenly mt-10 md:flex md:flex-row md:content-evenly'>
+          <div className='md:m-0 mt-10'>
+            <PerformanceMetric title='CPU (Tctl/Tdie)' value={parseFloat(data['CPU [#0]: AMD Ryzen 5 4600H: Enhanced'][0]['CPU (Tctl/Tdie)'])} />
+          </div>
+          <div className='md:m-0 mt-10'>
+            <PerformanceMetric title='CPU Core' value={parseFloat(data['CPU [#0]: AMD Ryzen 5 4600H: Enhanced'][1]['CPU Core'])} />
+          </div>
+          <div className='md:m-0 mt-10'>
+            <PerformanceMetric title='CPU SOC' value={parseFloat(data['CPU [#0]: AMD Ryzen 5 4600H: Enhanced'][2]['CPU SOC'])} />
+          </div>
         </div>
 
         <div className='mt-20'></div>
         <h1 className='text-2xl m-10'>GPU [#1]: AMD Radeon RX 5600 XT</h1>
-        <div className='flex justify-evenly mt-10'>
-          <PerformanceMetric title='GPU Temperature' value={parseFloat(data['GPU [#1]: AMD Radeon RX 5600 XT'][0]['GPU Temperature'])} />
-          <PerformanceMetric title='GPU Memory Junction Temperature' value={parseFloat(data['GPU [#1]: AMD Radeon RX 5600 XT'][1]['GPU Memory Junction Temperature'])} />
-          <PerformanceMetric title='GPU Hot Spot Temperature' value={parseFloat(data['GPU [#1]: AMD Radeon RX 5600 XT'][2]['GPU Hot Spot Temperature'])} />
-          <PerformanceMetric title='Frame Rate' value={parseFloat(data['RTSS'][0]['Framerate'])} />
+        <div className='flex flex-col justify-evenly mt-10 md:flex md:flex-row md:content-evenly'>
+          <div className='md:m-0 mt-10'>
+            <PerformanceMetric title='GPU Temperature' value={parseFloat(data['GPU [#1]: AMD Radeon RX 5600 XT'][0]['GPU Temperature'])} />
+          </div>
+          <div className='md:m-0 mt-10'>
+            <PerformanceMetric title='GPU Memory Junction Temperature' value={parseFloat(data['GPU [#1]: AMD Radeon RX 5600 XT'][1]['GPU Memory Junction Temperature'])} />
+          </div>
+          <div className='md:m-0 mt-10'>
+            <PerformanceMetric title='GPU Hot Spot Temperature' value={parseFloat(data['GPU [#1]: AMD Radeon RX 5600 XT'][2]['GPU Hot Spot Temperature'])} />
+          </div>
+          <div className='md:m-0 mt-10'>
+            <PerformanceMetric title='Frame Rate' value={parseFloat(data['RTSS'][0]['Framerate'])} />
+          </div>
         </div>
 
       </div>

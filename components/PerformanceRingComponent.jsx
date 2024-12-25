@@ -12,7 +12,7 @@ const PerformanceRingComponent = ({ value, max }) => {
   return (
     <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
       <div style={{ position: "relative", width: "150px", height: "150px" }}>
-        <svg width="150" height="150" viewBox="0 10 150 150">
+        <svg width="150" height="150" viewBox="0 0 150 150">
           {/* Background Circle (Darker black remaining part) */}
           <circle
             cx="75"
