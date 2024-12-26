@@ -37,16 +37,20 @@ const PerformanceRingComponent = ({ value, max }) => {
             transform="rotate(-90 75 75)" // Rotate so progress starts from top (12 o'clock)
           />
         </svg>
-      </div>
-      <div
-        style={{
-          marginLeft: "5px",
-          marginRight: "5px",
-          fontSize: "24px",
-          fontWeight: "bold",
-        }}
-      >
-        {Math.round(percentage)}{/* Show the value outside */}
+        {/* Centered Percentage Number */}
+        <div
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)", // Center the number
+            fontSize: "36px", // Increase the font size
+            fontWeight: "bold",
+            color: "#bbb", // Set the number color to dark
+          }}
+        >
+          {Math.round(percentage)} {/* Show the value in the center */}
+        </div>
       </div>
     </div>
   );
