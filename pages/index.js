@@ -32,7 +32,7 @@ export default function Home() {
 
       const intervalId = setInterval(() => {
         fetchDataFromDb();
-      }, 1000);
+      }, 2000);
       
       return () => {
         clearInterval(intervalId);
